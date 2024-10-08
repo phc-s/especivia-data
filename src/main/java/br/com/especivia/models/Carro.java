@@ -1,23 +1,24 @@
 package br.com.especivia.models;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
-import jakarta.persistence.Data;
-import jakarta.persistence.Id;
+import java.util.List;
+
 import jakarta.persistence.Column;
-import jakarta.persistence.NoArgsConstructor;
-import jakarta.persistence.AllArgsConstructor;
+import jakarta.persistence.ElementCollection;
+import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 import jakarta.persistence.OneToOne;
-import jakarta.persistence.ElementCollection;
-import java.util.List;
+import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@table(name = "Carro")
+@Table(name = "Carro")
 public class Carro {
 
     @Id

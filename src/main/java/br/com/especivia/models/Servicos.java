@@ -1,21 +1,21 @@
 package br.com.especivia.models;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
-import jakarta.persistence.Data;
-import jakarta.persistence.Id;
 import jakarta.persistence.Column;
-import jakarta.persistence.NoArgsConstructor;
-import jakarta.persistence.AllArgsConstructor;
+import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
+import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@table(name = "Serviços")
+@Table(name = "Serviços")
 public class Servicos {
 
     @Id
