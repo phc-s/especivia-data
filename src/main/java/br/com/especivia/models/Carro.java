@@ -1,14 +1,23 @@
 package br.com.especivia.models;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+import jakarta.persistence.Data;
 import jakarta.persistence.Id;
+import jakarta.persistence.Column;
+import jakarta.persistence.NoArgsConstructor;
+import jakarta.persistence.AllArgsConstructor;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.ElementCollection;
 import java.util.List;
 
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity
+@table(name = "Carro")
 public class Carro {
 
     @Id
@@ -16,15 +25,26 @@ public class Carro {
     private long id;
 
     @OneToOne
+    @Column(nullable = false, unique = true)
     private Motorista motorista_id;
 
     @ElementCollection
+    @Column(nullable = false)
     private List<String> equipamentos;
 
+    @Column(nullable = false)
     private String marca;
+
+    @Column(nullable = false)
     private String modelo;
+
+    @Column(nullable = false)
     private int portas;
+
+    @Column(nullable = false)
     private int ano;
+
+    @Column(nullable = false)
     private double quilometragem;
 
     public long get_Id() {

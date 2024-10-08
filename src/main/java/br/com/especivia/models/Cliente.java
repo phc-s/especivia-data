@@ -1,23 +1,45 @@
 package br.com.especivia.models;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+import jakarta.persistence.Data;
 import jakarta.persistence.Id;
+import jakarta.persistence.Column;
+import jakarta.persistence.NoArgsConstructor;
+import jakarta.persistence.AllArgsConstructor;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity
+@table(name = "Cliente")
 public class Cliente {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long cliente_id;
 
+    @Column(nullable = false)
     private String nome;
+    
+    @Column(nullable = false)
     private String sobrenome;
+
+    @Column(nullable = false)
     private String email;
+
+    @Column(nullable = false)
     private String endereco;
+
+    @Column(nullable = false)
     private int numero;
+
+    @Column(nullable = false)
     private int cpf;
+
+    @Column(nullable = false)
     private int senha;
 
     public long getCliente_Id() {

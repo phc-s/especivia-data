@@ -1,14 +1,23 @@
 package br.com.especivia.models;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+import jakarta.persistence.Data;
 import jakarta.persistence.Id;
+import jakarta.persistence.Column;
+import jakarta.persistence.NoArgsConstructor;
+import jakarta.persistence.AllArgsConstructor;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.ElementCollection;
 import java.util.List;
 
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity
+@table(name = "Avaliação")
 public class Avaliacao {
 
     @Id
@@ -16,15 +25,21 @@ public class Avaliacao {
     private long avaliacao_id;
 
     @OneToOne
+    @Column(nullable = false, unique = true)
     private Motorista motorista_id;
 
     @OneToOne
+    @Column(nullable = false, unique = true)
     private Cliente cliente_id;
 
     @ElementCollection
+    @Column(nullable = true)
     private List<String> tags;
 
+    @Column(nullable = false)
     private double estrelas;
+
+    @Column(nullable = false)
     private String descricao;
 
     public long get_Avaliacao() {

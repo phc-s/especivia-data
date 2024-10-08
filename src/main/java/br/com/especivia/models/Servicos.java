@@ -1,12 +1,21 @@
 package br.com.especivia.models;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+import jakarta.persistence.Data;
 import jakarta.persistence.Id;
+import jakarta.persistence.Column;
+import jakarta.persistence.NoArgsConstructor;
+import jakarta.persistence.AllArgsConstructor;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.OneToMany;
 
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity
+@table(name = "Serviços")
 public class Servicos {
 
     @Id
@@ -14,9 +23,11 @@ public class Servicos {
     private long servicos_id;
 
     @OneToMany
+    @Column(nullable = false, unique = true)
     private Cliente cliente_id;
 
     @OneToMany
+    @Column(nullable = false, unique = true)
     private Motorista motorista_id;
 
     public Motorista getMotorista_Id() {
