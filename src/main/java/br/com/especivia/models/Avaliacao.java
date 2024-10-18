@@ -23,7 +23,7 @@ public class Avaliacao {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long avaliacao_id;
+    private Long avaliacao_id;
 
     @OneToOne
     @Column(nullable = false, unique = true)
@@ -34,7 +34,7 @@ public class Avaliacao {
     private Cliente cliente_id;
 
     @ElementCollection
-    @Column(nullable = true)
+    @Column
     private List<String> tags;
 
     @Column(nullable = false)
@@ -43,7 +43,7 @@ public class Avaliacao {
     @Column(nullable = false)
     private String descricao;
 
-    public long get_Avaliacao() {
+    public Long get_Avaliacao() {
         return avaliacao_id;
     }
 

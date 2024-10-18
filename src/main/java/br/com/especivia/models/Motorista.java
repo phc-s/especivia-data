@@ -19,7 +19,7 @@ public class Motorista {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long motorista_id;
+    private Long motorista_id;
 
     @Column(nullable = false)
     private String nome;

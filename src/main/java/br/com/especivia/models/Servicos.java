@@ -20,7 +20,7 @@ public class Servicos {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long servicos_id;
+    private Long servicos_id;
 
     @OneToMany
     @Column(nullable = false, unique = true)
