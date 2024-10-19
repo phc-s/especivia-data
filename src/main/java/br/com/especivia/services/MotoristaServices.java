@@ -26,14 +26,14 @@ public class MotoristaServices {
     public Motorista updateDriver(Long id, Motorista motoristaUpdate) {
         return motoristaRepository.findById(id)
                 .map(motorista -> {
-                    motorista.setMotorista_Id(motoristaUpdate.getMotorista_Id());
-                    motorista.set_Nome(motoristaUpdate.get_Nome());
-                    motorista.set_Sobrenome(motoristaUpdate.get_Sobrenome());
-                    motorista.set_Email(motoristaUpdate.get_Email());
-                    motorista.set_Endereco(motoristaUpdate.get_Endereco());
-                    motorista.set_Numero(motoristaUpdate.get_Numero());
-                    motorista.set_cpf(motoristaUpdate.get_cpf());
-                    motorista.set_Senha(motoristaUpdate.get_Senha());
+                    motorista.setMotoristaId(motoristaUpdate.getMotoristaId());
+                    motorista.setNome(motoristaUpdate.getNome());
+                    motorista.setSobrenome(motoristaUpdate.getSobrenome());
+                    motorista.setEmail(motoristaUpdate.getEmail());
+                    motorista.setEndereco(motoristaUpdate.getEndereco());
+                    motorista.setNumero(motoristaUpdate.getNumero());
+                    motorista.setCpf(motoristaUpdate.getCpf());
+                    motorista.setSenha(motoristaUpdate.getSenha());
                     return motoristaRepository.save(motorista);
                 })
                 .orElse(null);

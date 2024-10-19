@@ -26,9 +26,9 @@ public class ServicosServices {
     public Servicos updateServices(Long id, Servicos servicosUpdate) {
         return servicosRepository.findById(id)
                 .map(servicos -> {
-                    servicos.setMotorista_Id(servicosUpdate.getMotorista_Id());
-                    servicos.setCliente_Id(servicosUpdate.getCliente_Id());
-                    servicos.setServicos_Id(servicosUpdate.getServicos_Id());
+                    servicos.setMotoristaId(servicosUpdate.getMotoristaId());
+                    servicos.setClienteId(servicosUpdate.getClienteId());
+                    servicos.setServicosId(servicosUpdate.getServicosId());
                     return servicosRepository.save(servicos);
                 })
                 .orElse(null);

@@ -26,14 +26,14 @@ public class ClienteServices {
     public Cliente updateClient(Long id, Cliente clienteUpdate) {
         return clienteRepository.findById(id)
                 .map(cliente -> {
-                    cliente.setCliente_Id(clienteUpdate.getCliente_Id());
-                    cliente.set_Nome(clienteUpdate.get_Nome());
-                    cliente.set_Sobrenome(clienteUpdate.get_Sobrenome());
-                    cliente.set_Email(clienteUpdate.get_Email());
-                    cliente.set_Endereco(clienteUpdate.get_Endereco());
-                    cliente.set_Numero(clienteUpdate.get_Numero());
-                    cliente.set_cpf(clienteUpdate.get_cpf());
-                    cliente.set_Senha(clienteUpdate.get_Senha());
+                    cliente.setClienteId(clienteUpdate.getClienteId());
+                    cliente.setNome(clienteUpdate.getNome());
+                    cliente.setSobrenome(clienteUpdate.getSobrenome());
+                    cliente.setEmail(clienteUpdate.getEmail());
+                    cliente.setEndereco(clienteUpdate.getEndereco());
+                    cliente.setNumero(clienteUpdate.getNumero());
+                    cliente.setCpf(clienteUpdate.getCpf());
+                    cliente.setSenha(clienteUpdate.getSenha());
                     return clienteRepository.save(cliente);
                 })
                 .orElse(null);

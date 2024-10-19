@@ -26,14 +26,14 @@ public class CarroServices {
     public Carro updateCar(Long id, Carro carroUpdate) {
         return carroRepository.findById(id)
                 .map(carro -> {
-                    carro.set_Id(carroUpdate.get_Id());
-                    carro.set_Marca(carroUpdate.get_Marca());
-                    carro.set_Modelo(carroUpdate.get_Modelo());
-                    carro.set_Portas(carroUpdate.get_Portas());
-                    carro.setMotorista_Id(carroUpdate.getMotorista_Id());
-                    carro.set_Ano(carroUpdate.get_Ano());
-                    carro.set_Quilometragem(carroUpdate.get_Quilometragem());
-                    carro.set_Equipamentos(carroUpdate.get_Equipamentos());
+                    carro.setId(carroUpdate.getId());
+                    carro.setMarca(carroUpdate.getMarca());
+                    carro.setModelo(carroUpdate.getModelo());
+                    carro.setPortas(carroUpdate.getPortas());
+                    carro.setMotoristaId(carroUpdate.getMotoristaId());
+                    carro.setAno(carroUpdate.getAno());
+                    carro.setQuilometragem(carroUpdate.getQuilometragem());
+                    carro.setEquipamentos(carroUpdate.getEquipamentos());
                     return carroRepository.save(carro);
                 })
                 .orElse(null);
