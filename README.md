@@ -1,6 +1,6 @@
 ## Especivia's Backend.
 
-This private prototype repository shows the concept of Especivia Data system. Currently not in development anymore.
+This private prototype repository shows the concept of Especivia Data system. Currently not in development anymore. Used for a back-end activity in my technical course.
 
 ## Dependences: 
 
