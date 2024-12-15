@@ -1,11 +1,6 @@
 ## Especivia's Backend.
 
-This repository shows the concept of Especivia Data system
-
-#### Content:
-
-+ Code Source
-+ Databank Documentation
+This private prototype repository shows the concept of Especivia Data system. Currently not in development anymore.
 
 ## Dependences: 
 
@@ -16,4 +11,6 @@ This repository shows the concept of Especivia Data system
 + GraalVM
 + Uses Java 17.
 
-More specific details at pom.xl
+## Credits: 
+  
+**phc-s, 2024**
